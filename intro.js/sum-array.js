@@ -10,6 +10,6 @@ function sum(arr){
 }
 sum(['2', '3', '4']);
 
-// zad. 2
+
 
 
