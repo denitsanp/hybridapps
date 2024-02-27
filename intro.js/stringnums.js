@@ -6,5 +6,5 @@ function stringOfNumbers(lastNum){
     console.log(result);
 }
 
-stringOfNumbers(10);
-stringOfNumbers(20);
+stringOfNumbers(5);
+stringOfNumbers(15);
