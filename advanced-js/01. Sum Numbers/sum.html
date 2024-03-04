@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Numbers</title>
+</head>
+<body>
+<input type="text" id="num1"> + <input type="text" id="num2"> = <input type="text" id="result">
+<input type="button" value="Calc" onclick="calc()">
+<script>
+    function calc() {
+        let inputField1 = parseFloat(document.getElementById("num1").value); 
+        let inputField2 = parseFloat(document.getElementById("num2").value); 
+        let result = inputField1 + inputField2; 
+        document.getElementById("result").value = result; 
+    }
+</script>
+</body>
+</html>
