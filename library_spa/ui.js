@@ -335,4 +335,3 @@ export function getKinveyUserAuthHeaders() {
         'Authorization': 'Kinvey ' + userAuthToken,
     };
 }
-
