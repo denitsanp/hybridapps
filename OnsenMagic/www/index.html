@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self' localhost:8000; 
+    style-src 'self' 'unsafe-inline'; 
+    script-src 'self' 'unsafe-eval' 'unsafe-inline'; 
+    img-src 'self' data:;
+    connect-src 'self' ws://localhost:8000;
+    font-src 'self' data:;
+    frame-src 'self';
+    media-src 'self';
+"> -->
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+    <script src="onsenui/js/onsenui.min.js"></script>
+
+    <title>Hello World</title>
+</head>
+
+<body>
+    <ons-page>
+        <ons-toolbar>
+            <div class="center">OnsenApp</div>
+        </ons-toolbar>
+        <ons-tabbar swipeable position="auto">
+            <ons-tab page="tab1.html" label="Home" icon="ion-ios-home, material:md-home" active> </ons-tab>
+            <ons-tab page="tab2.html" label="Settings" icon="ion-ios-face, material:md-face"> </ons-tab>
+            <ons-tab page="tab3.html" label="Battery" icon="ion-ios-battery, material:md-battery"> </ons-tab>
+        </ons-tabbar>
+    </ons-page>
+    <template id="tab1.html">
+        <ons-page id="Tab1">
+            <p style="text-align: center;">
+                Първа страница.
+            </p>
+            <div style="text-align: center; padding: 10px;">
+                <ons-button modifier="quiet" onclick="testAction()">TRY ME!</ons-button>
+            </div>
+        </ons-page>
+    </template>
+
+    <template id="tab2.html">
+        <ons-page id="Tab2">
+            <p style="text-align: center;" id="deviceVersion">
+
+            </p>
+        </ons-page>
+    </template>
+
+    <template id="tab3.html">
+        <ons-page id="BatteryPage">
+            <p style="text-align: center;">
+                ЗАРЯД НА БАТЕРИЯТА
+            </p>
+            <div style="text-align: center; padding: 10px;">
+                <ons-range id="batterySlider" value="100" min="0" max="100" disabled></ons-range>
+                <p id="batteryStatus" style="text-align: center;"></p>
+            </div>
+        </ons-page>
+    </template>
+
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    </style>
+</body>
+
+</html>

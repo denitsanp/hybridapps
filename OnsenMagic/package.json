@@ -1,0 +1,38 @@
+{
+  "name": "io.cordova.onsenmagic",
+  "displayName": "Onsen Magic",
+  "version": "1.0.0",
+  "description": "A sample Apache Cordova application that responds to the deviceready event.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Apache Cordova Team",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "^12.0.1",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-battery-status": "^2.0.3",
+    "cordova-plugin-browsersync": "^1.1.0",
+    "cordova-plugin-device": "^2.1.0",
+    "cordova-plugin-livereload": "^1.2.2",
+    "cordova-plugin-x-toast": "^2.7.3"
+  },
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-device": {},
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-x-toast": {}
+    }
+  },
+  "dependencies": {
+    "onsenui": "^2.12.8"
+  }
+}
