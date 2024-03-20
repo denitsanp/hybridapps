@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://students-manager.azurewebsites.net; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:;">
+
+    
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+        <script src="onsenui/js/onsenui.min.js"></script>
+        
+        <title>Student Admin</title>
+    </head>
+    <body>
+        <ons-navigator id="appNavigator">
+            <ons-page id="homePage">
+              <ons-toolbar>
+                <div class="center">Students Admin</div>
+              </ons-toolbar>
+          
+              <ons-list id="results">
+                <ons-list-header>Student Details</ons-list-header>
+              </ons-list>
+          
+              <ons-bottom-toolbar>
+                <div class="center">Home</div>
+              </ons-bottom-toolbar>
+            </ons-page>
+          </ons-navigator>
+          
+          <template id="detailsPage.html">
+            <ons-page id="detailsPage" >
+              <ons-toolbar>
+                <div class="left"><ons-back-button>Back</ons-back-button></div>
+                <div class="center" id="student-name">Student Name</div>
+              </ons-toolbar>
+          
+              <div style="text-align: center; margin-top: 30px;">
+                <img src="" alt="student image" id="student-picture-view" height="200" width="200">
+                <p>
+                  <span id="student-faculty-number">Faculty Number</span><br>
+                  <span id="student-email">Email</span><br>
+                  <span id="student-username">Username</span>
+                </p>
+              </div>
+          
+              <ons-bottom-toolbar>
+                <div class="center">
+                  Picture
+                  <ons-button onclick="openPicturePage()">Camera</a></ons-button>
+                </div>
+              </ons-bottom-toolbar>
+            </ons-page>
+          </template>
+          
+          <template id="picturePage.html">
+            <ons-page id="picturePage">
+              <ons-toolbar>
+                <div class="left"><ons-back-button>Back</ons-back-button></div>
+                <div class="center">Student Picture</div>
+              </ons-toolbar>
+          
+              <div style="text-align: center; margin-top: 30px;">
+                <ons-button onclick="getPicture()">CLICK</ons-button>
+                <img id="myImage" src="#" alt="Alternate Text" class="not-displayed" style="margin: auto; display: none;">
+                <p>
+                  <ons-input id="faculty-number" modifier="underbar" placeholder="Faculty Number" float></ons-input><br>
+                  <ons-input id="password" modifier="underbar" type="password" placeholder="Password" float></ons-input>
+                </p>
+                <ons-button id="addPicture" onclick="sendPictureRequest()">Add Picture</ons-button>
+              </div>
+          
+              <ons-bottom-toolbar>
+                <div class="center">Student Picture</div>
+              </ons-bottom-toolbar>
+            </ons-page>
+          </template>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
