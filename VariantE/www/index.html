@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="
+          default-src 'self';
+          script-src 'self' 'unsafe-inline' 'unsafe-eval';
+          connect-src 'self';
+          img-src 'self' data:;
+          style-src 'self' 'unsafe-inline';
+          font-src 'self';
+           ">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="onsenui/css/onsenui.css">
+        <link rel="stylesheet" href="onsenui/css/onsen-css-components.min.css">
+        <script src="onsenui/js/onsenui.min.js"></script> 
+
+        <title>Take a Photo</title>
+    </head>
+    <body>
+        
+        <ons-page>
+            <ons-toolbar>
+              <div class="center">Take a Photo</div>
+            </ons-toolbar>
+          
+            <ons-card class="card--material" style="width: 90%; max-width: 350px; margin: 20px auto;">
+              <img id="myImage" src="" alt="X" class="card__image" style="width: 100%; display: none;">
+              <div class="content">
+                <div>
+                  <ons-button modifier="large" onclick="takePhoto()"><ons-icon icon="ion-ios-share"></ons-icon></ons-button>
+                </div>
+              </div>
+            </ons-card>
+          </ons-page>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
